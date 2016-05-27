@@ -94,28 +94,27 @@ NAME	name to use for the run and all temporary files
 ASSEMBLY	genome assembly file in fasta format
 LINEAGE	path to the lineage to be used (-l /path/to/lineage)
 
-2- Gene set assessment:
+2. Gene set assessment:
 
-python BUSCO_v1.1b.py -o NAME -in GENE_SET -l LINEAGE -m OGS
+`python BUSCO_v1.1b.py -o NAME -in GENE_SET -l LINEAGE -m OGS`
 
 NAME	name to use for the run and temporary files
 GENE_SET	gene set protein sequence file in fasta format
 LINEAGE	path to the lineage to be used (-l /path/to/lineage)
 
 
-3- Transcriptome assessment:
+3. Transcriptome assessment:
 
-python BUSCO_v1.1b.py -o NAME -in TRANSCRIPTOME -l LINEAGE -m trans
+`python BUSCO_v1.1b.py -o NAME -in TRANSCRIPTOME -l LINEAGE -m trans`
 
 NAME	name to use for the run and temporary files
 TRANSCRIPTOME	transcript set sequence file in fasta format
 LINEAGE	path to the lineage to be used (-l /path/to/lineage)
 
 
-***********************************************************
 
-D. BUSCO options:
-------------------
+options:
+-------------
 
 1. Mandatory arguments
 
@@ -167,16 +166,16 @@ files and directories:
 
 1. Files
 
-short_summary_	Contains summary results in BUSCO notation
+`short_summary_`	Contains summary results in BUSCO notation
 and a brief breakdown of the metrics
 
-full_table_	Complete results in tabular format with
+`full_table_`	Complete results in tabular format with
 coordinates, scores and lengths of BUSCO matches
 
-training_set_	Set of complete BUSCO matches used for training Augustus
+`training_set_`	Set of complete BUSCO matches used for training Augustus
 Only created during genome assessment
 
-_tblastn	Results in tabular format of tBLASTn searches
+`_tblastn`	Results in tabular format of tBLASTn searches
 with BUSCO consensus sequences
 
 2. Directories
@@ -209,7 +208,7 @@ cd sample_data/
 
 2.	Run BUSCO assessment on sequence file ‘target.fa’ in genome mode.
 
-`python BUSCO_v1.1b.py -in target.fa -o SAMPLE -l example -m genome`
+`python BUSCO_mod.py -in target.fa -o SAMPLE -l example -m genome`
 
 3.	Compare the final output ‘run_SAMPLE’ with the provided files in ‘run_TEST’.
 
